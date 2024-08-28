@@ -1,0 +1,203 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    font-size: 16px; /* Tamaño base para rem */
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 5rem; /* Cambiado a rem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0A3871;
+}
+
+.logo {
+    width: 6rem; /* Cambiado a rem */
+    height: auto;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: calc(100vh - 5rem); /* Ajustado para el header */
+    padding: 1rem; /* Cambiado a rem */
+    gap: 1.5rem; /* Cambiado a rem */
+    box-sizing: border-box;
+}
+
+/* Sección 1 */
+.seccion1, .seccion2 {
+    background-color: #ffffff;
+    border-radius: 0.625rem; /* Cambiado a rem */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Cambiado a rem */
+    padding: 1rem; /* Cambiado a rem */
+    box-sizing: border-box;
+}
+
+/* Sección 1 */
+.contenedorcajatexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem; /* Cambiado a rem */
+}
+
+.cajatexto {
+    width: 100%;
+    height: 10rem; /* Cambiado a rem */
+    border: 0.0625rem solid #ccc; /* Cambiado a rem */
+    border-radius: 0.5rem; /* Cambiado a rem */
+    background-color: #fafafa;
+    color: #0A3871;
+    font-size: 1rem; /* Cambiado a rem */
+    padding: 0.5rem; /* Cambiado a rem */
+    box-sizing: border-box;
+    resize: none;
+}
+
+.alerta {
+    margin-bottom: 1rem; /* Cambiado a rem */
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+}
+
+.alerta img {
+    margin-right: 0.5rem; /* Cambiado a rem */
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en pantallas pequeñas */
+    justify-content: space-between;
+}
+
+.btn-encriptar, .btn-desencriptar {
+    width: 48%;
+    height: 3rem; /* Cambiado a rem */
+    border-radius: 1.5rem; /* Cambiado a rem */
+    border: none;
+    font-size: 1rem; /* Cambiado a rem */
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0.5rem 0; /* Espacio entre botones */
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    color: white;
+}
+
+.btn-encriptar:hover {
+    background-color: #082f6b;
+}
+
+.btn-desencriptar {
+    background-color: #f8f9fa;
+    color: #0A3871;
+    border: 0.0625rem solid #0A3871; /* Cambiado a rem */
+}
+
+.btn-desencriptar:hover {
+    background-color: #e2e6ea;
+}
+
+/* Sección 2 */
+.seccion2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; /* Cambiado a rem */
+    width: 100%;
+    max-width: 25rem; /* Máximo ancho en pantallas grandes */
+}
+
+.contenedormunieco img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor-parrafo h3 {
+    font-size: 1.375rem; /* Cambiado a rem */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem; /* Cambiado a rem */
+}
+
+.contenedor-parrafo p {
+    font-size: 0.875rem; /* Cambiado a rem */
+    text-align: center;
+    margin-bottom: 1rem; /* Cambiado a rem */
+}
+
+.contenedor-resultado p {
+    font-size: 1.25rem; /* Cambiado a rem */
+    color: #495057;
+}
+
+.contenedor-copiar {
+    margin-top: 1rem; /* Cambiado a rem */
+    text-align: center;
+}
+
+.btn-copiar {
+    width: 100%;
+    height: 3rem; /* Cambiado a rem */
+    border-radius: 1.5rem; /* Cambiado a rem */
+    background-color: #ffffff;
+    color: #0A3871;
+    border: 0.0625rem solid #0A3871; /* Cambiado a rem */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-copiar:hover {
+    background-color: #e2e6ea;
+}
+
+.ocultar {
+    display: none;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem; /* Asegura espacio en pantallas pequeñas */
+    }
+
+    .seccion1, .seccion2 {
+        width: 90%; /* Ocupa el ancho disponible */
+        max-width: none; /* Sin límite máximo en pantallas pequeñas */
+    }
+
+    .contenedor-botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .seccion2 {
+        width: 100%;
+        max-width: none;
+        padding: 1rem; /* Asegura espacio en pantallas pequeñas */
+    }
+}
